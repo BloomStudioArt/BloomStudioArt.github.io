@@ -1,0 +1,17 @@
+---
+layout: default
+title: Gallery
+---
+
+<section class="gallery-header">
+    <h1>Gallery</h1>
+</section>
+
+<section class="gallery-grid">
+    {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+    {% for project in sorted_projects%}
+        {% include project-card.html project=project %}
+    {% else %}
+        <p>No projects yet – check back soon.</p>
+    {% endfor %}
+</section>

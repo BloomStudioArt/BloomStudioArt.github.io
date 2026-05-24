@@ -1,3 +1,49 @@
-theme: jekyll-theme-minimal
-title: Bloom Studio Porfolio
-description: Portfolio for art created by Bloom Studio.
+# ─────────────────────────────────────────────
+# SITE IDENTITY
+# These values are available in templates as {{ site.title }}, {{ site.description }}, etc.
+# ─────────────────────────────────────────────
+title: Bloom Studio
+description: Art portfolio by Bloom Studio.
+
+# The full URL is used by Jekyll to build absolute links and a sitemap.
+url: "https://bloom-studio.art"
+
+# ─────────────────────────────────────────────
+# COLLECTIONS
+# Collections are how Jekyll handles repeating content types that aren't blog posts, e.g.: portfolio projects, team members, etc.
+# ─────────────────────────────────────────────
+collections:
+  projects:
+    output: true  # "output: true" means each item gets its own page.
+    permalink: /projects/:name/   # "permalink" controls the URL structure of those pages, e.g.: /projects/TOL-2026/
+
+
+# ─────────────────────────────────────────────
+# DEFAULTS
+# Sets front matter values automatically to avoid repeating `layout: project` at the top of every project file.
+#
+# "scope" defines what the default applies to.
+# "values" defines what gets applied.
+# ─────────────────────────────────────────────
+defaults:
+  - scope:
+      path: ""          # all files...
+      type: "projects"  # ...that are in the projects collection
+    values:
+      layout: "project" # automatically use the project layout
+
+  - scope:
+      path: ""
+      type: "pages"     # standard .md and .html pages
+    values:
+      layout: "default"
+
+# ─────────────────────────────────────────────
+# BUILD EXCLUSIONS
+# Files Jekyll should ignore when building the site.
+# These exist in the repo but should never be compiled into the output.
+# ─────────────────────────────────────────────
+exclude:
+  - Gemfile
+  - Gemile.lock
+  - README.md

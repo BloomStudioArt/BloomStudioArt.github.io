@@ -1,0 +1,18 @@
+<article class="project-card">
+    <a href="{{ include.project.url }}">
+        <div class="card-image">
+            <img src="{{ include.project.cover }}" alt="{{ include.project.title }}" />
+        </div>
+        <div class="card-body">
+            <h2>{{ include.project.title }}</h2>
+            <p>{{ include.project.summary | | truncate: 100, '...' }}</p>
+            {% if include.project.tags %}
+                <ul class="tags">
+                    {% for tag in include.project.tags %}
+                        <li>{{ tag }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </a>
+</article>

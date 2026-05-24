@@ -1,18 +1,27 @@
-# This .gitignore is appropriate for repositories deployed to GitHub Pages and using
-# a Gemfile as specified at https://github.com/github/pages-gem#conventional
-
-# Basic Jekyll gitignores (synchronize to Jekyll.gitignore)
+# ─── JEKYLL BUILD OUTPUT ───────────────────────────
+# The compiled site.
+# Never commit this — GitHub rebuilds it from source on every push.
 _site/
+
+# Jekyll's caching folders for faster rebuilds.
+# These should be local only.
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
 
-# Additional Ruby/bundler ignore for when you run: bundle install
+# ─── RUBY / BUNDLER ────────────────────────────────
+# Gems installed locally by `bundle install`.
+# The /vendor prefix anchors this to the repo root only.
 /vendor
 
-# Specific ignore for GitHub Pages
-# GitHub Pages will always use its own deployed version of pages-gem
-# This means GitHub Pages will NOT use your Gemfile.lock and therefore it is
-# counterproductive to check this file into the repository.
-# Details at https://github.com/github/pages-gem/issues/768
+# Gemfile.lock intentionally excluded for GitHub Pages.
+# GitHub always uses its own gem versions server-side, so committing a lock file causes version conflicts.
+# See: https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# ─── VS CODE ───────────────────────────────────────
+.vscode/
+
+# ─── OS FILES ──────────────────────────────────────
+.DS_Store        # macOS folder metadata (invisible, but annoying in diffs)
+Thumbs.db        # Windows thumbnail cache
