@@ -1,0 +1,44 @@
+@use '../base/variables' as *;
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: $nav-height;
+  background-color: $color-background;
+  border-bottom: $border-width solid $border-color;
+}
+
+nav {
+  max-width: $max-width;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 $space-8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .site-title {
+    font-size: $text-base;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: flex;
+    gap: $space-8;
+
+    a {
+      font-size: $text-sm;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+  }
+}

@@ -8,6 +8,9 @@ description: Art portfolio by Bloom Studio.
 # The full URL is used by Jekyll to build absolute links and a sitemap.
 url: "https://bloom-studio.art"
 
+# Images are stored in cloudinary
+cloudinary: "https://res.cloudinary.com/dcbapc/image/upload/f_auto,q_auto"
+
 # ─────────────────────────────────────────────
 # COLLECTIONS
 # Collections are how Jekyll handles repeating content types that aren't blog posts, e.g.: portfolio projects, team members, etc.
@@ -38,6 +41,10 @@ defaults:
     values:
       layout: "default"
 
+# Minify Sass output in production
+sass:
+  style: compressed
+
 # ─────────────────────────────────────────────
 # BUILD EXCLUSIONS
 # Files Jekyll should ignore when building the site.
@@ -45,5 +52,5 @@ defaults:
 # ─────────────────────────────────────────────
 exclude:
   - Gemfile
-  - Gemile.lock
+  - Gemfile.lock
   - README.md

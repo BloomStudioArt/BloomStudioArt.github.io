@@ -1,0 +1,113 @@
+@import '../base/variables';
+
+.project-page {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $space-12 $space-8 $space-24;
+
+  // ─── HEADER ────────────────────────────────────────
+  .project-header {
+    max-width: $max-width-narrow;
+    margin-bottom: $space-12;
+
+    h1 {
+      font-size: $text-2xl;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      margin-bottom: $space-3;
+    }
+
+    time {
+      display: block;
+      margin-bottom: $space-4;
+    }
+  }
+
+  // ─── COVER IMAGE ────────────────────────────────────
+  .project-cover {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: $space-12;
+  }
+
+  // ─── BODY COPY ──────────────────────────────────────
+  // Markdown content gets rendered inside .project-body.
+  // We target elements directly since we don't control the HTML Markdown outputs.
+  .project-body {
+    max-width: $max-width-narrow;
+
+    h1, h2, h3, h4 {
+      margin-top: $space-12;
+      margin-bottom: $space-4;
+      font-weight: 500;
+    }
+
+    h2 { font-size: $text-xl; }
+    h3 { font-size: $text-lg; }
+
+    p {
+      color: $color-text-secondary;
+      margin-bottom: $space-6;
+      max-width: none;    // Inherited 68ch cap from _typography.scss already applies via max-width-narrow on the parent
+    }
+
+    // Images embedded in the write-up
+    img {
+      width: 100%;
+      height: auto;
+      margin: $space-8 0;
+    }
+
+    // Blockquotes — useful for client quotes, process notes
+    blockquote {
+      border-left: 2px solid $color-border;
+      padding-left: $space-6;
+      margin: $space-8 0;
+      font-style: italic;
+      color: $color-text-secondary;
+    }
+
+    // If you ever add code snippets
+    code {
+      font-family: $font-mono;
+      font-size: $text-sm;
+      background-color: $color-border;
+      padding: $space-1 $space-2;
+      border-radius: $radius-sm;
+    }
+
+    // Space between major sections
+    hr {
+      border: none;
+      border-top: $border-width solid $color-border;
+      margin: $space-12 0;
+    }
+  }
+
+  // ─── PROJECT NAVIGATION ─────────────────────────────
+  // Prev/next links between projects — we'll wire the Liquid for this shortly
+  .project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: $space-16;
+    padding-top: $space-8;
+    border-top: $border-width solid $color-border;
+
+    a {
+      font-size: $text-sm;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      transition: color $transition-fast;
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+
+    .project-nav__prev::before { content: '← '; }
+    .project-nav__next::after  { content: ' →'; }
+  }
+}

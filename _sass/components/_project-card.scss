@@ -1,0 +1,56 @@
+@import '../base/variables';
+
+.project-card {
+  // Essential for masonry — prevents a card from splitting across columns
+  break-inside: avoid;
+
+  // Vertical spacing between cards
+  // Note: gap doesn't work with CSS columns — margin-bottom does
+  margin-bottom: $space-8;
+
+  a {
+    display: block;
+
+    &:hover .card-image img {
+      transform: scale(1.03);
+    }
+
+    &:hover .card-body h2 {
+      color: $color-text-secondary;
+    }
+  }
+
+  // ─── IMAGE ───────────────────────────────────────
+  .card-image {
+    overflow: hidden;
+    background-color: $color-border;  // Visible while image loads
+
+    img {
+      width: 100%;
+      height: auto;        // Natural height — key to masonry working correctly
+      display: block;
+      transition: transform $transition-base;
+    }
+  }
+
+  // ─── BODY ────────────────────────────────────────
+  .card-body {
+    padding: $space-4 0 $space-2;
+
+    h2 {
+      font-size: $text-md;
+      font-weight: 400;       // Light weight reads as refined
+      letter-spacing: -0.01em;
+      margin-bottom: $space-2;
+      transition: color $transition-fast;
+    }
+
+    p {
+      font-size: $text-sm;
+      color: $color-text-secondary;
+      line-height: 1.5;
+      max-width: none;        // Overrides the 68ch cap from _typography.scss
+      margin-bottom: $space-3;
+    }
+  }
+}

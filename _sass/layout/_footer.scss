@@ -1,0 +1,15 @@
+@import '../base/variables';
+
+footer {
+  margin-top: auto;     // Pushes footer to bottom if page content is short
+  padding: $space-12 $space-8;
+  border-top: $border-width solid $border-color;
+
+  p {
+    max-width: $max-width;
+    margin: 0 auto;
+    font-size: $text-sm;
+    color: $color-text-muted;
+    letter-spacing: 0.03em;
+  }
+}

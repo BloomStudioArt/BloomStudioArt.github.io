@@ -1,0 +1,50 @@
+// ─── COLOR ───────────────────────────────────────
+$color-background:    #f9f9f7;   // Warm off-white — softer than pure white
+$color-surface:       #ffffff;   // Cards, elevated surfaces
+$color-text-primary:  #111111;   // Body text
+$color-text-secondary:#555555;   // Captions, meta, secondary labels
+$color-text-muted:    #999999;   // Placeholder, disabled
+$color-border:        #e5e5e5;   // Dividers, card borders
+$color-accent:        #111111;   // Accent — start monochromatic, add colour later
+
+// ─── TYPOGRAPHY ───────────────────────────────────
+$font-sans:   'Inter', system-ui, -apple-system, sans-serif;
+$font-serif:  'Playfair Display', Georgia, serif;   // Optional — good for headings
+$font-mono:   'JetBrains Mono', 'Courier New', monospace;
+
+// Type scale (major third — 1.25 ratio)
+$text-xs:     0.64rem;    // 10px
+$text-sm:     0.8rem;     // 13px
+$text-base:   1rem;       // 16px
+$text-md:     1.25rem;    // 20px
+$text-lg:     1.563rem;   // 25px
+$text-xl:     1.953rem;   // 31px
+$text-2xl:    2.441rem;   // 39px
+$text-3xl:    3.052rem;   // 49px
+
+// ─── SPACING ──────────────────────────────────────
+// 4px base unit — everything is a multiple of 4
+$space-1:     0.25rem;    // 4px
+$space-2:     0.5rem;     // 8px
+$space-3:     0.75rem;    // 12px
+$space-4:     1rem;       // 16px
+$space-6:     1.5rem;     // 24px
+$space-8:     2rem;       // 32px
+$space-12:    3rem;       // 48px
+$space-16:    4rem;       // 64px
+$space-24:    6rem;       // 96px
+
+// ─── LAYOUT ───────────────────────────────────────
+$max-width:         1200px;   // Site-wide content cap
+$max-width-narrow:  720px;    // Text-heavy pages (about, project body)
+$nav-height:        64px;
+
+// ─── BORDERS & RADIUS ─────────────────────────────
+$border-width:      1px;
+$border-color:      $color-border;
+$radius-sm:         4px;
+$radius-md:         8px;
+
+// ─── TRANSITIONS ──────────────────────────────────
+$transition-fast:   150ms ease;
+$transition-base:   250ms ease;

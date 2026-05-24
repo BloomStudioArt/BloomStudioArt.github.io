@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-sans;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;   // Tight tracking — reads as refined
+}
+
+h1 { font-size: $text-3xl; }
+h2 { font-size: $text-2xl; }
+h3 { font-size: $text-xl;  }
+h4 { font-size: $text-lg;  }
+
+p {
+  max-width: 68ch;    // ~optimal reading line length
+  margin-bottom: $space-4;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+time, figcaption {
+  font-size: $text-sm;
+  color: $color-text-secondary;
+  letter-spacing: 0.03em;
+}

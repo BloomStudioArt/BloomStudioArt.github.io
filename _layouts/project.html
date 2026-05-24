@@ -16,10 +16,28 @@ layout: default
     </header>
 
     {% if page.cover %}
-        <img class="project-cover" src="{{ page.cover }}" alt="{{ page.title }}" />
+        <img class="project-cover" src="{{ site.cloudinary }}{{ page.cover }}" alt="{{ page.title }}" />
     {% endif %}
 
     <div class="project-body">
         {{ content }}
     </div>
+
+    {% if page.previous or page.next %}
+        <nav class="project-nav">
+            {% if page.previous %}
+                <a href="{{ page.previous.url }}" class="project-nav__prev">
+                    {{ page.previous.title }}
+                </a>
+            {% else %}
+                <span></span>
+            {% endif %}
+
+            {% if page.next %}
+                <a href="{{ page.next.url }}" class="project-nav__next">
+                    {{ page.next.title }}
+                </a>
+            {% endif %}
+        </nav>
+    {% endif %}
 </article>

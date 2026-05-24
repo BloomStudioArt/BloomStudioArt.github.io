@@ -1,0 +1,30 @@
+@import '../base/variables';
+
+.gallery-header {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $space-16 $space-8 $space-6;
+
+  h1 {
+    // Deliberately understated — the work is the focus, not the label
+    font-size: $text-sm;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $color-text-secondary;
+  }
+}
+
+.gallery-grid {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $space-8 $space-16;
+
+  // CSS columns masonry — no JS required
+  columns: 1;
+  column-gap: $space-8;
+
+  @media (min-width: 640px) {
+    columns: 2;
+  }
+}

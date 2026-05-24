@@ -1,0 +1,18 @@
+@import '../base/variables';
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+
+  li {
+    font-size: $text-xs;
+    font-weight: 500;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    padding: $space-1 $space-2;
+    border: $border-width solid $color-border;
+    border-radius: $radius-sm;
+  }
+}

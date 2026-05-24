@@ -1,0 +1,79 @@
+@import '../base/variables';
+
+.about-page {
+  max-width: $max-width-narrow;
+  margin: 0 auto;
+  padding: $space-16 $space-8 $space-24;
+
+  // ─── PAGE HEADER ─────────────────────────────────
+  .about-header {
+    margin-bottom: $space-16;
+
+    h1 {
+      font-size: $text-sm;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      margin-bottom: $space-8;
+    }
+
+    p {
+      font-size: $text-md;
+      font-weight: 300;
+      line-height: 1.7;
+      color: $color-text-primary;
+      max-width: none;
+    }
+  }
+
+  // ─── TEAM ─────────────────────────────────────────
+  .about-team {
+    border-top: $border-width solid $color-border;
+    padding-top: $space-12;
+
+    h2 {
+      font-size: $text-sm;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      margin-bottom: $space-8;
+    }
+  }
+
+  .team-member {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $space-8;
+    padding: $space-8 0;
+    border-bottom: $border-width solid $color-border;
+
+    @media (max-width: 520px) {
+      grid-template-columns: 1fr;
+    }
+
+    .member-name {
+      h3 {
+        font-size: $text-base;
+        font-weight: 500;
+        margin-bottom: $space-1;
+      }
+
+      span {
+        font-size: $text-sm;
+        color: $color-text-muted;
+        letter-spacing: 0.03em;
+      }
+    }
+
+    .member-bio {
+      p {
+        font-size: $text-sm;
+        color: $color-text-secondary;
+        line-height: 1.7;
+        max-width: none;
+      }
+    }
+  }
+}
