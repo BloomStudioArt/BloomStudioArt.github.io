@@ -1,0 +1,107 @@
+@import '../base/variables';
+
+.home-page {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: $space-16 $space-8 $space-24;
+
+  // ─── STUDIO STATEMENT ──────────────────────────────
+  .home-statement {
+    max-width: $max-width-narrow;
+    margin-bottom: $space-24;
+    padding-bottom: $space-16;
+    border-bottom: $border-width solid $border-color;
+
+    p {
+      font-size: $text-xl;
+      font-weight: 300;
+      line-height: 1.5;
+      letter-spacing: -0.01em;
+      color: $color-text-primary;
+      max-width: none;
+      margin-bottom: $space-8;
+    }
+
+    &__link {
+      display: inline-block;
+      font-size: $text-sm;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      transition: color $transition-fast;
+
+      &::after {
+        content: ' →';
+      }
+
+      &:hover {
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  // ─── FEATURED PROJECT ───────────────────────────────
+  .home-featured {
+    &__label {
+      display: block;
+      font-size: $text-sm;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: $color-text-secondary;
+      margin-bottom: $space-6;
+    }
+
+    &__card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $space-12;
+      align-items: start;
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
+
+      &:hover .home-featured__image img {
+        transform: scale(1.02);
+      }
+
+      &:hover .home-featured__body h2 {
+        color: $color-text-secondary;
+      }
+    }
+
+    &__image {
+      overflow: hidden;
+      background-color: $color-border;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform $transition-base;
+      }
+    }
+
+    &__body {
+      padding-top: $space-2;
+
+      h2 {
+        font-size: $text-2xl;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        margin-bottom: $space-4;
+        transition: color $transition-fast;
+      }
+
+      p {
+        font-size: $text-base;
+        color: $color-text-secondary;
+        line-height: 1.7;
+        margin-bottom: $space-6;
+        max-width: none;
+      }
+    }
+  }
+}

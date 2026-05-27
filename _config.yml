@@ -4,6 +4,7 @@
 # ─────────────────────────────────────────────
 title: Bloom Studio
 description: Art portfolio by Bloom Studio.
+email: "hello@bloom-studio.art"
 
 # The full URL is used by Jekyll to build absolute links and a sitemap.
 url: "https://bloom-studio.art"
@@ -22,6 +23,8 @@ collections:
   projects:
     output: true  # "output: true" means each item gets its own page.
     permalink: /projects/:name/   # "permalink" controls the URL structure of those pages, e.g.: /projects/TOL-2026/
+  members:
+    output: false
 
 
 # ─────────────────────────────────────────────
@@ -37,7 +40,6 @@ defaults:
       type: "projects"  # ...that are in the projects collection
     values:
       layout: "project" # automatically use the project layout
-
   - scope:
       path: ""
       type: "pages"     # standard .md and .html pages

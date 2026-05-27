@@ -1,0 +1,26 @@
+<div class="team-member">
+  <div class="member-photo">
+    {% if include.member.photo %}
+      <img
+        src="{{ site.cloudinary }}{{ include.member.photo }}"
+        alt="{{ include.member.name }}"
+      />
+    {% endif %}
+  </div>
+
+  <div class="member-info">
+    <h3>{{ include.member.name }}</h3>
+
+    <span class="member-role">{{ include.member.role }}</span>
+
+    <p>{{ include.member.bio }}</p>
+
+    {% if include.member.website %}
+    <a href="{{ include.member.website }}" target="_blank" class="member-website">{{ include.member.website | remove: "https://" }}</a>
+    {% endif %}
+    <br />
+    {% if include.member.instagram %}
+    <a href="{{ include.member.instagram }}" target="_blank" class="member-instagram">{{ include.member.instagram_handle }}</a>
+    {% endif %}
+  </div>
+</div>

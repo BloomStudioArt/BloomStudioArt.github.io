@@ -1,15 +1,46 @@
 @import '../base/variables';
 
 footer {
-  margin-top: auto;     // Pushes footer to bottom if page content is short
-  padding: $space-12 $space-8;
+  margin-top: auto;
   border-top: $border-width solid $border-color;
+  padding: $space-8;
 
-  p {
+  .footer-inner {
     max-width: $max-width;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+
+  .footer-top {
+    display: flex;
+    align-items: center;
+    gap: $space-4;
+  }
+
+  .footer-name {
+    font-size: $text-sm;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $color-text-primary;
+  }
+
+  .footer-copy {
     font-size: $text-sm;
     color: $color-text-muted;
     letter-spacing: 0.03em;
+  }
+
+  .footer-email {
+    font-size: $text-sm;
+    color: $color-text-muted;
+    transition: color $transition-fast;
+    width: fit-content;   // Prevents the link underline from stretching full width
+
+    &:hover {
+      color: $color-text-primary;
+    }
   }
 }

@@ -1,3 +1,9 @@
 <footer>
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</p>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <span class="footer-name">{{ site.title }}</span>
+      <span class="footer-copy">&copy; {{ 'now' | date: "%Y" }}</span>
+    </div>
+    <a href="mailto:{{ site.email }}" class="footer-email">{{ site.email }}</a>
+  </div>
 </footer>
