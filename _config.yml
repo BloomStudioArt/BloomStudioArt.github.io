@@ -8,6 +8,9 @@ description: Art portfolio by Bloom Studio.
 # The full URL is used by Jekyll to build absolute links and a sitemap.
 url: "https://bloom-studio.art"
 
+# Tells Jekyll to build pages as directories with an `index.html` inside to serve as destination page
+permalink: pretty
+
 # Images are stored in cloudinary
 cloudinary: "https://res.cloudinary.com/dcbapc/image/upload/f_auto,q_auto"
 
