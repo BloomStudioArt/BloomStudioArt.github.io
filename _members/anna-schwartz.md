@@ -6,5 +6,5 @@ bio: "Anna Schwartz is an artist and educator. Her research is grounded in an ev
 website: "https://annajschwartz.com"
 instagram: "https://instagram.com/anna.j.schwartz"
 instagram_handle: "@anna.j.schwartz"
-order: 3
+order: 2
 ---

@@ -6,5 +6,5 @@ bio: "Alvaro Morales is a Colombian composer, sound designer, sound artist and e
 website: "https://alvaro-morales.com"
 instagram: "https://instagram.com/ajmorales"
 instagram_handle: "@ajmorales"
-order: 2
+order: 3
 ---

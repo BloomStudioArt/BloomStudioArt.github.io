@@ -8,4 +8,4 @@ summary: "Handheld sonic sculptures that react as participants move them resulti
 
 # Echo Nexus – 2025
 
-What an amazing project.
+Echo Nexus is an interactive installation driven by a custom icosahedron-shaped musical instrument. Audiences are invited to engage with the instrument to explore collective expressions of real-time music and visuals, building novel sensory experiences based on collaboration and collective interplay.

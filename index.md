@@ -6,7 +6,7 @@ title: Home
 <section class="home-page">
 
   <div class="home-statement">
-    <p>Bloom Studio is an interactive art initiative exploring the intersection of sound, light, and participation.</p>
+    <p>Bloom Studio is an interactive art initiative exploring novel sensory experiences driven by audience participation and engagement with curated environments.</p>
     <a href="{{ '/gallery/' | relative_url }}" class="home-statement__link">View Work</a>
   </div>
 
