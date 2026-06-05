@@ -5,40 +5,72 @@
   margin: 0 auto;
   padding: $space-12 $space-8 $space-24;
 
-  // ─── HEADER ────────────────────────────────────────
+  // ─── TWO-COLUMN INTRO ────────────────────────────────
+  .project-intro {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: $space-12;
+    align-items: start;
+    margin-bottom: $space-16;
+    padding-bottom: $space-16;
+    border-bottom: $border-width solid $border-color;
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // ─── LEFT COLUMN ─────────────────────────────────────
+  .project-left {
+    display: flex;
+    flex-direction: column;
+    gap: $space-12;    // was $space-8 — more breathing room between header and body
+  }
+
+  // ─── HEADER ──────────────────────────────────────────
+  // Remove position: sticky — no longer needed now that
+  // body sits directly below rather than off-screen
   .project-header {
-    max-width: $max-width-narrow;
-    margin-bottom: $space-12;
+    padding-bottom: $space-8;   // ← add this
+    border-bottom: $border-width solid $border-color;  // optional — adds a divider between header and body
 
     h1 {
-      font-size: $text-2xl;
+      font-size: $text-xl;
       font-weight: 400;
       letter-spacing: -0.02em;
-      margin-bottom: $space-3;
+      line-height: 1.2;
+      margin-bottom: $space-4;
     }
 
     time {
       display: block;
-      margin-bottom: $space-4;
+      margin-bottom: $space-6;
+    }
+
+    .tags {
+      margin-bottom: $space-6;
     }
   }
 
-  // ─── COVER IMAGE ────────────────────────────────────
+  // ─── COVER IMAGE ─────────────────────────────────────
+  .project-cover-wrap {
+    width: 100%;
+    position: sticky;              // Image stays in view as left column scrolls
+    top: calc(#{$nav-height} + #{$space-8});
+  }
+
   .project-cover {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: $space-12;
+    object-fit: contain;
   }
 
-  // ─── BODY COPY ──────────────────────────────────────
-  // Markdown content gets rendered inside .project-body.
-  // We target elements directly since we don't control the HTML Markdown outputs.
+  // ─── BODY COPY ───────────────────────────────────────
+  // max-width removed — left column width provides the constraint
   .project-body {
-    max-width: $max-width-narrow;
-
-    h1, h2, h3, h4 {
-      margin-top: $space-12;
+    h2, h3, h4 {
+      margin-top: $space-8;
       margin-bottom: $space-4;
       font-weight: 500;
     }
@@ -49,51 +81,37 @@
     p {
       color: $color-text-secondary;
       margin-bottom: $space-6;
-      max-width: none;    // Inherited 68ch cap from _typography.scss already applies via max-width-narrow on the parent
+      max-width: none;
     }
 
-    // Images embedded in the write-up
     img {
       width: 100%;
       height: auto;
       margin: $space-8 0;
     }
 
-    // Blockquotes — useful for client quotes, process notes
     blockquote {
-      border-left: 2px solid $color-border;
+      border-left: 2px solid $border-color;
       padding-left: $space-6;
       margin: $space-8 0;
       font-style: italic;
       color: $color-text-secondary;
     }
 
-    // If you ever add code snippets
-    code {
-      font-family: $font-mono;
-      font-size: $text-sm;
-      background-color: $color-border;
-      padding: $space-1 $space-2;
-      border-radius: $radius-sm;
-    }
-
-    // Space between major sections
     hr {
       border: none;
-      border-top: $border-width solid $color-border;
+      border-top: $border-width solid $border-color;
       margin: $space-12 0;
     }
   }
 
-  // ─── PROJECT NAVIGATION ─────────────────────────────
-  // Prev/next links between projects — we'll wire the Liquid for this shortly
+  // ─── PROJECT NAV ─────────────────────────────────────
   .project-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: $space-16;
     padding-top: $space-8;
-    border-top: $border-width solid $color-border;
+    border-top: $border-width solid $border-color;
 
     a {
       font-size: $text-sm;

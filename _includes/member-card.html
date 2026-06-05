@@ -2,7 +2,7 @@
   <div class="member-photo">
     {% if include.member.photo %}
       <img
-        src="{{ site.cloudinary }}{{ include.member.photo }}"
+        src="{{ site.cloudinary }}{{ include.member.effects }}{{ include.member.photo }}"
         alt="{{ include.member.name }}"
       />
     {% endif %}
