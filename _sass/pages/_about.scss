@@ -3,13 +3,13 @@
 .about-page {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $space-16 $space-8 $space-24;
+  padding: $space-12 $space-8 $space-8;
 
   // ─── HEADER ──────────────────────────────────────
   .about-header {
-    max-width: $max-width-narrow;
-    margin-bottom: $space-16;
-    padding-bottom: $space-16;
+    max-width: $max-width;
+    margin-bottom: $space-12;
+    padding-bottom: $space-12;
     border-bottom: $border-width solid $border-color;
 
     h1 {
@@ -32,8 +32,8 @@
 
   // ─── TEAM ────────────────────────────────────────
   .about-team {
-    margin-bottom: $space-16;
-    padding-bottom: $space-16;
+    margin-bottom: $space-12;
+    padding-bottom: $space-12;
     border-bottom: $border-width solid $border-color;
 
     h2 {
@@ -114,20 +114,17 @@
 
   // ─── CONTACT LINKS ───────────────────────────────
   .about-contact {
-    display: flex;
     flex-direction: column;    // ← was row, now column
     gap: $space-4;
     align-items: flex-start;   // ← left-aligns both links
 
     a {
-        font-size: $text-sm;
-        color: $color-text-muted;
-        letter-spacing: 0.03em;
-        transition: color $transition-fast;
+      color: $color-text-muted;
+      transition: color $transition-fast;
 
-        &:hover {
+      &:hover {
         color: $color-text-primary;
-        }
+      }
     }
-    }
+  }
 }

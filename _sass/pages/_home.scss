@@ -3,13 +3,13 @@
 .home-page {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $space-16 $space-8 $space-24;
+  padding: $space-12 $space-8 $space-16;
 
   // ─── STUDIO STATEMENT ──────────────────────────────
   .home-statement {
-    max-width: $max-width-narrow;
-    margin-bottom: $space-24;
-    padding-bottom: $space-16;
+    max-width: $max-width;
+    margin-bottom: $space-12;
+    padding-bottom: $space-12;
     border-bottom: $border-width solid $border-color;
 
     p {
@@ -64,7 +64,7 @@
       }
 
       &:hover .home-featured__image img {
-        transform: scale(1.02);
+        transform: scale(1.1);
       }
 
       &:hover .home-featured__body h2 {

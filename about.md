@@ -22,10 +22,6 @@ title: About
   </div>
 
   <div class="about-contact">
-    <a href="mailto:{{ site.email }}">{{ site.email }}</a>
-    <a href="https://github.com/BloomStudioArt" target="_blank" class="github-link"
-    >
-      GitHub
-    </a>
+    For general inquiries, please contact us <a href="mailto:{{ site.email }}">here</a>.
   </div>
 </section>

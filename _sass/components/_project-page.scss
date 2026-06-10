@@ -3,17 +3,14 @@
 .project-page {
   max-width: $max-width;
   margin: 0 auto;
-  padding: $space-12 $space-8 $space-24;
+  padding: $space-12 $space-8 $space-8;
 
-  // ─── TWO-COLUMN INTRO ────────────────────────────────
   .project-intro {
     display: grid;
     grid-template-columns: 2fr 3fr;
     gap: $space-12;
     align-items: start;
-    margin-bottom: $space-16;
-    padding-bottom: $space-16;
-    border-bottom: $border-width solid $border-color;
+    margin-bottom: $space-12;
 
     @media (max-width: 640px) {
       grid-template-columns: 1fr;
@@ -24,38 +21,37 @@
   .project-left {
     display: flex;
     flex-direction: column;
-    gap: $space-12;    // was $space-8 — more breathing room between header and body
+    gap: $space-12;
   }
 
   // ─── HEADER ──────────────────────────────────────────
-  // Remove position: sticky — no longer needed now that
-  // body sits directly below rather than off-screen
   .project-header {
-    padding-bottom: $space-8;   // ← add this
-    border-bottom: $border-width solid $border-color;  // optional — adds a divider between header and body
+    padding-bottom: $space-2;
+    border-bottom: $border-width solid $border-color;
 
     h1 {
       font-size: $text-xl;
       font-weight: 400;
       letter-spacing: -0.02em;
       line-height: 1.2;
-      margin-bottom: $space-4;
+      margin-bottom: $space-2;
     }
 
     time {
       display: block;
-      margin-bottom: $space-6;
+      margin-bottom: $space-2;
     }
 
     .tags {
-      margin-bottom: $space-6;
+      margin-top: $space-2;
+      margin-bottom: $space-2;
     }
   }
 
   // ─── COVER IMAGE ─────────────────────────────────────
   .project-cover-wrap {
     width: 100%;
-    position: sticky;              // Image stays in view as left column scrolls
+    position: sticky;
     top: calc(#{$nav-height} + #{$space-8});
   }
 
@@ -67,16 +63,7 @@
   }
 
   // ─── BODY COPY ───────────────────────────────────────
-  // max-width removed — left column width provides the constraint
   .project-body {
-    h2, h3, h4 {
-      margin-top: $space-8;
-      margin-bottom: $space-4;
-      font-weight: 500;
-    }
-
-    h2 { font-size: $text-xl; }
-    h3 { font-size: $text-lg; }
 
     p {
       color: $color-text-secondary;
@@ -90,18 +77,13 @@
       margin: $space-8 0;
     }
 
-    blockquote {
-      border-left: 2px solid $border-color;
-      padding-left: $space-6;
-      margin: $space-8 0;
-      font-style: italic;
-      color: $color-text-secondary;
-    }
+    .link {
+      color: $color-text-muted;
+      transition: color $transition-fast;
 
-    hr {
-      border: none;
-      border-top: $border-width solid $border-color;
-      margin: $space-12 0;
+      &:hover {
+        color: $color-text-primary;
+      }
     }
   }
 
